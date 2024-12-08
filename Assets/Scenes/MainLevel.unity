@@ -631,6 +631,33 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1996550270}
   m_SourcePrefab: {fileID: 100100000, guid: 70568a130d30243b48c5ac033b7c9764, type: 3}
+--- !u!1 &414319426 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4681491386937735916, guid: 2462142bcda5dad45975add9996018e1, type: 3}
+  m_PrefabInstance: {fileID: 1842255993}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &414319433
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 414319426}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -6692290496178104961, guid: 1ec7b66e68c7d8b47bf089a5f4c36b65, type: 3}
 --- !u!1 &468601897
 GameObject:
   m_ObjectHideFlags: 0
@@ -3546,6 +3573,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1155620564559379019, guid: 2462142bcda5dad45975add9996018e1, type: 3}
+      propertyPath: m_Size.x
+      value: 0.77
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155620564559379019, guid: 2462142bcda5dad45975add9996018e1, type: 3}
+      propertyPath: m_Size.y
+      value: 0.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155620564559379019, guid: 2462142bcda5dad45975add9996018e1, type: 3}
+      propertyPath: m_Size.z
+      value: 0.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155620564559379019, guid: 2462142bcda5dad45975add9996018e1, type: 3}
+      propertyPath: m_Center.y
+      value: -0.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155620564559379019, guid: 2462142bcda5dad45975add9996018e1, type: 3}
+      propertyPath: m_Center.z
+      value: 0.24
+      objectReference: {fileID: 0}
     - target: {fileID: 3260861638834122554, guid: 2462142bcda5dad45975add9996018e1, type: 3}
       propertyPath: m_Name
       value: Dinner Table
@@ -3606,10 +3653,43 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 5277198928253701318, guid: 2462142bcda5dad45975add9996018e1, type: 3}
+      propertyPath: m_Size.x
+      value: 1.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 5277198928253701318, guid: 2462142bcda5dad45975add9996018e1, type: 3}
+      propertyPath: m_Size.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 5277198928253701318, guid: 2462142bcda5dad45975add9996018e1, type: 3}
+      propertyPath: m_Size.z
+      value: 1.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 5277198928253701318, guid: 2462142bcda5dad45975add9996018e1, type: 3}
+      propertyPath: m_Center.y
+      value: -0.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 6398248480752999121, guid: 2462142bcda5dad45975add9996018e1, type: 3}
+      propertyPath: m_Height
+      value: 0.67
+      objectReference: {fileID: 0}
+    - target: {fileID: 6398248480752999121, guid: 2462142bcda5dad45975add9996018e1, type: 3}
+      propertyPath: m_Radius
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6398248480752999121, guid: 2462142bcda5dad45975add9996018e1, type: 3}
+      propertyPath: m_Center.y
+      value: -0.65
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 1155620564559379019, guid: 2462142bcda5dad45975add9996018e1, type: 3}
+    - {fileID: 6398248480752999121, guid: 2462142bcda5dad45975add9996018e1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4681491386937735916, guid: 2462142bcda5dad45975add9996018e1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 414319433}
   m_SourcePrefab: {fileID: 100100000, guid: 2462142bcda5dad45975add9996018e1, type: 3}
 --- !u!1 &1996550269 stripped
 GameObject:

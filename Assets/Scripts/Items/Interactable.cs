@@ -10,7 +10,7 @@ namespace Items
     {
         private Rigidbody rb;
         private Transform moveToTransform;
-        private const float lerpSpeed = 10f;
+        private const float lerpSpeed = 30f;
         private Vector3 newPosition;
 
         private void Awake()
@@ -22,8 +22,12 @@ namespace Items
         {
             if (moveToTransform)
             {
-                newPosition = Vector3.Lerp(transform.position, moveToTransform.position, Time.deltaTime * lerpSpeed);
-                rb.MovePosition(newPosition);
+                //newPosition = Vector3.Lerp(transform.position, moveToTransform.position, Time.deltaTime * lerpSpeed)
+                
+            }
+            else
+            {
+                
             }
         }
 
@@ -32,10 +36,12 @@ namespace Items
             moveToTransform = moveTransform;
             rb.useGravity = false;
             rb.isKinematic = true;
+            transform.SetParent(moveToTransform, true);
         }
 
         public void Release()
         {
+            transform.SetParent(null);
             moveToTransform = null;
             rb.useGravity = true;
             rb.isKinematic = false;
