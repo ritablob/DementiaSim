@@ -8,43 +8,49 @@ namespace Items
     [RequireComponent(typeof(Rigidbody))]
     public class Interactable : MonoBehaviour
     {
-        private Rigidbody rb;
+        [HideInInspector] public bool isInteractable; // able to hold in your hand
+        [HideInInspector] public bool isRecipient; // able to use other Interactables on
+        [HideInInspector] public Rigidbody rb;
         private Transform moveToTransform;
-        private const float lerpSpeed = 30f;
         private Vector3 newPosition;
+        [HideInInspector]public UIPrompt uiPrompt;
+        
+        public bool isGrabbed;
+        public bool isPerformed;
 
         private void Awake()
         {
             rb = GetComponent<Rigidbody>();
+            uiPrompt = GetComponent<UIPrompt>();
         }
 
         public virtual void FixedUpdate()
         {
-            if (moveToTransform)
-            {
-                //newPosition = Vector3.Lerp(transform.position, moveToTransform.position, Time.deltaTime * lerpSpeed)
-                
-            }
-            else
-            {
-                
-            }
         }
 
-        public void Grab(Transform moveTransform)
+        public virtual void Grab(Transform moveTransform)
         {
-            moveToTransform = moveTransform;
+            if (!isInteractable)
+            {
+                return;
+            }
+            isGrabbed = true;
             rb.useGravity = false;
             rb.isKinematic = true;
-            transform.SetParent(moveToTransform, true);
+            transform.SetParent(moveTransform, true);
         }
 
-        public void Release()
+        public virtual void Release()
         {
+            if (!isInteractable)
+            {
+                return;
+            }
             transform.SetParent(null);
-            moveToTransform = null;
             rb.useGravity = true;
             rb.isKinematic = false;
+            isGrabbed = false;
+            isPerformed = true;
         }
     }
 }

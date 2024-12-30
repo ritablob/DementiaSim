@@ -28,19 +28,15 @@ namespace Player
             bool pressInput = inputManager.GetPlayerPress();
             if (!pressInput) return;
             // if holding something in hand
-            if (pickedUpInteractable)
-            {
-                //Debug.Log("Trying to drop object that is holding");
-                pickedUpInteractable.Release();
-                pickedUpInteractable = null;
-                return;
-            }
             // else
             Vector3 mousePosition = mouse.position.ReadValue();
             Ray ray = cam.ScreenPointToRay(mousePosition);
             if (Physics.Raycast(ray, out RaycastHit hit, grabDistance, grabMask))
             {
-                if (!pickedUpInteractable && hit.transform.TryGetComponent(out pickedUpInteractable))
+                Debug.DrawRay(ray.origin, ray.direction * 10, Color.yellow);
+                // try release in case already holding something
+                //pickedUpInteractable?.Release();
+                if (hit.transform.TryGetComponent(out pickedUpInteractable))
                 {
                     //Debug.Log("Grabbed interactable "+hit.transform.gameObject);
                     pickedUpInteractable.Grab(handPosition);
@@ -51,8 +47,6 @@ namespace Player
                 }
                 
             }
-            
-            // if player already holding something
         }
     }
 }

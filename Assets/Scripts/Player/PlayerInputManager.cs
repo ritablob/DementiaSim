@@ -23,7 +23,7 @@ namespace Player
             }
         
             inputAction = new GameInputAction();
-            Cursor.lockState = CursorLockMode.Locked;
+            //Cursor.lockState = CursorLockMode.Locked;
         }
 
         private void OnEnable()
