@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 6763116563835975887}
   - component: {fileID: 4865291048728844415}
   - component: {fileID: 8527076338404497989}
-  - component: {fileID: 3417176160170762757}
   - component: {fileID: 2308855483172295684}
   - component: {fileID: 7145576737986346905}
   m_Layer: 5
@@ -105,19 +104,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &3417176160170762757
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3300174572074552687}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29539079e3f4cd5499bbc6de97a0a4e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: {fileID: 7102196460497089709}
 --- !u!65 &2308855483172295684
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -135,7 +121,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 5.5026455, y: 5.869323, z: 5.949765}
   m_Center: {x: -0.2672216, y: -0.85625666, z: -0.3648132}
@@ -234,7 +220,7 @@ MonoBehaviour:
   m_text: Potato
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 6520dd233ff4d894cac2d8998077358c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -314,6 +300,7 @@ GameObject:
   - component: {fileID: 9194977798823182020}
   - component: {fileID: 771554141217362423}
   - component: {fileID: 8646589952624040101}
+  - component: {fileID: 3359673774888984955}
   m_Layer: 8
   m_Name: Potato
   m_TagString: Untagged
@@ -426,13 +413,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b80f9c3614a48bfa1c5abef588d7ec1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resetRotationUponGrab: 0
   isInteractable: 1
   isRecipient: 0
   rb: {fileID: 0}
   uiPrompt: {fileID: 0}
   isGrabbed: 0
   isPerformed: 0
-  secondaryFoodItem: {fileID: 0}
+  secondaryFoodItem: {fileID: 3059918862070215913, guid: 4ca8895d13b8fa0418e7b4f1ca9fb1fb, type: 3}
 --- !u!65 &8646589952624040101
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -452,5 +440,21 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.9286053, y: 2.301504, z: 4.252997}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 5.092172, y: 2.301504, z: 6.374722}
+  m_Center: {x: -0.03456697, y: 0, z: -0.27765965}
+--- !u!114 &3359673774888984955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5415738699568073347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29539079e3f4cd5499bbc6de97a0a4e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 6763116563835975887}
+  UIIsEnabled: 0
+  text: {fileID: 7102196460497089709}
+  baseText: 
